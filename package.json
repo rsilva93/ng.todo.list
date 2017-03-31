@@ -1,0 +1,27 @@
+{
+  "name": "ng.todo.list",
+  "version": "1.0.0",
+  "description": "Some simple AngularJS to-do list.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsilva93/ng.todo.list.git"
+  },
+  "keywords": [
+    "ng",
+    "todo",
+    "list"
+  ],
+  "author": "Robson da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsilva93/ng.todo.list/issues"
+  },
+  "homepage": "https://github.com/rsilva93/ng.todo.list#readme",
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
