@@ -7,6 +7,42 @@
 
 <body style="text-align: center;">
 
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl as vm">
+
+            <h2>{{vm.title}}</h2>
+
+            <li type="none" ng-repeat="item in vm.list" ng-if="!item.done">
+                <label>
+                <input type="checkbox" ng-model="item.done">
+                    {{ item.text }}
+                </input>
+            </label>
+                <a ng-click="vm.remove($index)"><img style="height: 15px; cursor: pointer;" src="img/trash.png" title="Remove" /></a>
+            </li>
+
+            <li type="none" ng-repeat="item in vm.list" ng-if="item.done">
+                <label>
+                <input type="checkbox" ng-model="item.done">
+                    <s>{{ item.text }}</s>
+                </input>
+            </label>
+                <a ng-click="vm.remove($index)"><img style="height: 15px; cursor: pointer;" src="img/trash.png" title="Remove" /></a>
+            </li>
+
+            <br>
+            <span>{{message}}</span>
+            <br>
+
+            <form ng-submit="vm.add()">
+                <input type="text" ng-model="vm.model.text" autofocus required />
+                <br>
+                <span>Press enter to submit</span>
+            </form>
+
+        </div>
+    </div>
+
     <script src="node_modules/angular/angular.js"></script>
     <script src="js/app.js"></script>
 </body>
